@@ -1,0 +1,23 @@
+<import src="../movieTemplate/movieTemplate.wxml"/>   
+<template name="movieListTemplate">
+  <view class="movie-list-container">
+    <view class="inner-container">
+      <view class="movie-head">
+        <text class="slogan">正在热映</text>
+        <!-- <text class="slogan">{{categoryTitle}}</text> -->
+        <view catchtap="onMoreTap" class="more" >
+          <text class="more-text" bindtap="onMoreTap" data-category="categoryTitle">更多</text>
+          <image class="more-img" src="/images/icon/arrow-right.png"></image>
+        </view>
+      </view>
+      <view class="movies-container">
+      <block >
+        
+        <template is="movieTemplate" />
+      </block>
+        <template is="movieTemplate" />
+        <template is="movieTemplate" />
+      </view>
+    </view>
+  </view>
+</template>

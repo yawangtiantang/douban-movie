@@ -1,0 +1,22 @@
+<import src="movieListTemplate/movieListTemplate.wxml"/>
+<import src="movie-gridTemplate/movie-gridTemplate" />  <view class="search">
+    <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+    <input placeholder='夏有乔木雅望天堂' placeholder-class='placeholder' bindfocus="onBindFocus" bindchange="onBindChange"></input>
+    <image wx:if="{{searchPanelShow}}" src="/images/icon/xx.png" class="xx-img" bindtap="onCanelImgTap" ></image>
+ </view>
+
+<view class="container" wx:if="{{containerShow}}">
+  <view class="movies-template" >
+    <template is="movieListTemplate"/>  
+  </view>
+ 
+  <view class="movies-template">
+    <template is="movieListTemplate"/>  
+  </view> 
+  <view class="movies-template">
+    <template is="movieListTemplate"/>  
+  </view>
+</view>
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+  <template is="movieGridTemplate"></template> 
+</view>

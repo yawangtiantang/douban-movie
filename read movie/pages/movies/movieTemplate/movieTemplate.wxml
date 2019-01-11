@@ -1,0 +1,12 @@
+<import src="../starTemplate/starTemplate.wxml"/>    
+<template name="movieTemplate">
+  <view class="movie-container">
+    <image src="/images/yourname.png" class="movieImg"></image>
+  
+    <text class="movieTitle">你的名字</text>
+    <view>
+      <template is="starTemplate"/>  
+      
+    </view>
+  </view>
+</template>
